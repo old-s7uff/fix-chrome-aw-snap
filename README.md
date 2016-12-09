@@ -3,17 +3,17 @@ on linux.
 
 first watch /dev/shm how much mem that have. 
 when this problem happen that because of low mem on /dev/shm
-so resize it
+so resize it (Make sure you have +20GB free space.)
 
 open **nano /etc/fstab**
 
 if is "**tmpfs      /dev/shm      tmpfs   defaults,size=64m   0   0**"
 
-change it like "**tmpfs      /dev/shm      tmpfs   defaults,size=2g   0   0**"
+change it like "**tmpfs      /dev/shm      tmpfs   defaults,size=10g   0   0**"
 
 if isn't then wrote this in end of file
 
-**tmpfs      /dev/shm      tmpfs   defaults,size=2g   0   0**
+**tmpfs      /dev/shm      tmpfs   defaults,size=10g   0   0**
 
 
 then execute
